@@ -29,7 +29,7 @@ fclean: clean
 
 re: fclean $(NAME)
 
-test_%.c: $(NAME)
-	$(CC) $(FLAGS) -L. $@ -l:$(NAME)
-	./a.out
-	rm -f ./a.out
+test_%: $(NAME)
+	$(CC) $(FLAGS) -L. -o $@.out $@.c -l:$(NAME)
+	./$@.out
+	rm -f ./$@.out
