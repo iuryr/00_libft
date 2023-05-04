@@ -7,7 +7,9 @@ FLAGS = -Wall -Wextra -Werror
 HEADER_FILE = $(NAME).h
 SRC_FILES = ft_putchar_fd.c \
 			ft_putstr_fd.c \
-			ft_putendl_fd.c
+			ft_putendl_fd.c \
+			ft_isalpha.c
+
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 TEST_SRC = $(foreach file, $(SRC_FILES), test_$(file))
