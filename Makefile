@@ -9,7 +9,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_isalpha.c \
-			ft_isdigit.c
+			ft_isdigit.c \
+			ft_isalnum.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
