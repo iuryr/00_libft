@@ -14,7 +14,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_isascii.c \
 			ft_isprint.c \
 			ft_strlen.c \
-			ft_bzero.c
+			ft_bzero.c \
+			ft_memset.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
