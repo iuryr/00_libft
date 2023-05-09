@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:10:21 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/09 11:56:17 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/05/09 13:59:46 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
