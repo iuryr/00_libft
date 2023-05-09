@@ -20,7 +20,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_memmove.c \
 			ft_memcmp.c \
 			ft_memchr.c \
-			ft_tolower.c
+			ft_tolower.c \
+			ft_toupper.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
