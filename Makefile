@@ -25,7 +25,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_strchr.c \
 			ft_strrchr.c \
 			ft_strncmp.c \
-			ft_strstr.c
+			ft_strstr.c \
+			ft_atoi.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
