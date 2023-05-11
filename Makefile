@@ -26,7 +26,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_strrchr.c \
 			ft_strncmp.c \
 			ft_strstr.c \
-			ft_atoi.c
+			ft_atoi.c \
+			ft_strlcpy.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
@@ -50,6 +51,6 @@ fclean: clean
 re: fclean $(NAME)
 
 test_%: $(NAME)
-	$(CC) $(FLAGS) -L. -o $@.out $@.c -l:$(NAME)
+	$(CC) $(FLAGS) -L. -o $@.out $@.c -lbsd -l:$(NAME) 
 	./$@.out
 	rm -f ./$@.out
