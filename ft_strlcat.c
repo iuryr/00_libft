@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 08:59:43 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/11 11:29:18 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/05/11 14:21:49 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	counter = 0;
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
-	if (size == 0 || dst_len >= size)
+	if (size == 0)
+		return (src_len);
+	if (dst_len >= size)
 		return (dst_len);
 	while (src[counter] != '\0' && counter < size - dst_len - 1)
 	{
