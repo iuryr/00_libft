@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 09:16:28 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/10 10:12:22 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/05/11 14:47:14 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ static int	ft_strcmp(const char *s1, const char *s2)
 	return (*s1 - *s2);
 }
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (*needle == '\0')
-		return ((char *)haystack);
+	if (*little == '\0')
+		return ((char *)big);
 	else
 	{
-		while (*haystack != '\0')
+		while (*big != '\0' && --len >= 0)
 		{
-			if (ft_strcmp(haystack, needle))
-				haystack++;
+			if (ft_strcmp(big, little))
+				big++;
 			else
-				return ((char *)haystack);
+				return ((char *)big);
 		}
 		return (NULL);
 	}
