@@ -30,7 +30,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
 			ft_strdup.c \
-			ft_calloc.c
+			ft_calloc.c \
+			ft_substr.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
