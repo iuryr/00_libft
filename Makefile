@@ -34,7 +34,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
-			ft_split.c
+			ft_split.c \
+			ft_putnbr_fd.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
