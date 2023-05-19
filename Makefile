@@ -37,7 +37,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_split.c \
 			ft_putnbr_fd.c \
 			ft_striteri.c \
-			ft_strmapi.c
+			ft_strmapi.c \
+			ft_itoa.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
