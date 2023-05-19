@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:10:21 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/19 09:39:50 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/05/19 10:17:20 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
