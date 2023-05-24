@@ -4,7 +4,6 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -c
 FLAGS = -Wall -Wextra -Werror
 
-HEADER_FILE = $(NAME).h
 SRC_FILES = ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
