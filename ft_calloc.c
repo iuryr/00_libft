@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 10:39:55 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/15 11:11:25 by iusantos         ###   ########.fr       */
+/*   Created: 2023/05/23 15:42:12 by iusantos          #+#    #+#             */
+/*   Updated: 2023/05/23 15:47:26 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	void	*ptr;
 	size_t	size;
 
+	if (nelem == 0 || elsize == 0)
+		return (NULL);
 	size = nelem * elsize;
+	if (size / nelem != elsize)
+		return (NULL);
 	ptr = malloc(size);
 	ft_bzero(ptr, size);
 	return (ptr);
