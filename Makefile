@@ -39,7 +39,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_strmapi.c \
 			ft_itoa.c
 
-BONUS_FILES = ft_lstnew_bonus.c 
+BONUS_FILES = ft_lstnew_bonus.c \
+			  ft_lstadd_front_bonus.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 BONUS_OBJ_FILES = $(BONUS_FILES:.c=.o)
@@ -63,7 +64,7 @@ fclean: clean
 
 re: fclean $(NAME)
 
-bonus: $(BONUS_OBJ_FILES)
+bonus: $(NAME) $(BONUS_OBJ_FILES)
 	ar -crs $(NAME) $(BONUS_OBJ_FILES)
 
 test_%: $(NAME)
