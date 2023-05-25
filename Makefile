@@ -39,7 +39,10 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_strmapi.c \
 			ft_itoa.c
 
+BONUS_FILES = ft_lstnew_bonus.c 
+
 OBJ_FILES = $(SRC_FILES:.c=.o)
+BONUS_OBJ_FILES = $(BONUS_FILES:.c=.o)
 
 TEST_SRC = $(foreach file, $(SRC_FILES), test_$(file))
 TEST_OBJ = $(TEST_SRC:.c=.o)
@@ -59,6 +62,9 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
+
+bonus: $(BONUS_OBJ_FILES)
+	ar -crs $(NAME) $(BONUS_OBJ_FILES)
 
 test_%: $(NAME)
 	$(CC) $(FLAGS) -L. -o $@.out $@.c -lbsd -l:$(NAME) -g3 

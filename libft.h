@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:10:21 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/24 15:54:46 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:18:05 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
+t_list	*ft_lstnew(void *content);
 
 #endif
