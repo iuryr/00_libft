@@ -41,7 +41,8 @@ SRC_FILES = ft_putchar_fd.c \
 
 BONUS_FILES = ft_lstnew_bonus.c \
 			  ft_lstadd_front_bonus.c \
-			  ft_lstsize_bonus.c
+			  ft_lstsize_bonus.c \
+			  ft_lstlast_bonus.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 BONUS_OBJ_FILES = $(BONUS_FILES:.c=.o)
