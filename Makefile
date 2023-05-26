@@ -58,10 +58,10 @@ TEST_OBJ = $(TEST_SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
-	ar -crs $(NAME) $(OBJ_FILES)
 
 %.o : %.c 
 	$(CC) $(CFLAGS) $< -o $@
+	ar -crs $(NAME) $@
 
 clean:
 	rm -f *.o
@@ -71,8 +71,7 @@ fclean: clean
 
 re: fclean $(NAME)
 
-bonus: $(NAME) $(BONUS_OBJ_FILES)
-	ar -crs $(NAME) $(BONUS_OBJ_FILES)
+bonus: $(BONUS_OBJ_FILES)
 
 test_%: $(NAME)
 	$(CC) $(FLAGS) -L. -o $@.out $@.c -lbsd -l:$(NAME) -g3 
