@@ -6,7 +6,7 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:42:12 by iusantos          #+#    #+#             */
-/*   Updated: 2023/05/24 16:25:40 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/05/25 15:44:25 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	size_t	size;
 
 	if (nelem == 0 || elsize == 0)
-		return (NULL);
+		return (malloc(0));
 	size = nelem * elsize;
 	if (size / nelem != elsize)
 		return (NULL);
